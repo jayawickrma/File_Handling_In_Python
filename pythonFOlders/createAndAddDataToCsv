@@ -1,0 +1,27 @@
+import csv
+
+#get file path
+csv_file_path = 'pythonFolders/csv/my_file.csv'
+
+#store the heading in list
+fied_name = ["Name","Age","City"]
+
+data = [
+    {"Name":"John Doe","Age":34,"City":"London"},
+    {"Name":"John Wick","Age":38,"City":"California"},
+    {"Name":"Jack reacher","Age":26,"City":"Miami"},
+]
+
+#Open the csv file writing
+with open(csv_file_path,'w',newline='') as csv_file:
+    #Create a CSV writer object
+    csv_writer = csv.DictWriter(csv_file,fieldnames=fied_name)#this argument is keywod arfgument(specify the keyword name)
+
+    #Write the header {column names} th the CSV file
+    csv_writer.writeheader()
+
+    #Write the data rows to the csv file
+    for row in data:
+        csv_writer.writerow(row)
+    
+    print(f"CSV data has been written to {csv_file_path}")
