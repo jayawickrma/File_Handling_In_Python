@@ -1,0 +1,6 @@
+nishan,nishan,nishan
+sandul ,sandul,sandul
+nishan,tharaka,nishan
+nishan,1,1
+Name:{name},Mobile:{mobile},Email:{email}
+Name:{name},Mobile:{mobile},Email:{email}
