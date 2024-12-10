@@ -18,6 +18,7 @@ def viewContacts():
     with open("textFolders/contact.txt",'r')as file:
         contacts =file.read()
         print(contacts)
+        
   
         
         # if contacts:
