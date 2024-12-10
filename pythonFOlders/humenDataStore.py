@@ -13,3 +13,7 @@ with open("pythonFOlders/textFOlders/humenData",'w')as json_file:
 with open("pythonFOlders/textFOlders/humenData",'r')as json_object:
     json_o =json.load(json_object)
     print(json_o)
+
+
+
+  
