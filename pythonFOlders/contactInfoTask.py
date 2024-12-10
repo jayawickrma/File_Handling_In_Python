@@ -7,7 +7,7 @@
 
 
 def addContact():
-    with open("textFolders/contact.txt",'a')as file:
+    with open("pythonFOlders/textFOlders/contact.txt",'a')as file:
         name =input("Enter name :")
         mobile=input("Enter your mobile number :")
         email=input("Enter your Email Address :")
@@ -15,24 +15,10 @@ def addContact():
         file.write(f"{name},{mobile},{email}\n")
 
 def viewContacts():
-    with open("textFolders/contact.txt",'r')as file:
+    with open("pythonFOlders/textFOlders/contact.txt",'r')as file:
         contacts =file.read()
-        print(contacts)
-        
-  
-        
-        # if contacts:
-        #     print("Here the all values \n\n")
-        #     for contact in contacts:
-        #         name,mobile,email =contact.strip().split(",")
-        #         print("Name:{name} \n Contact :{mobile}\n Email :{email}")
-
-        #     else:
-        #         print("Empty sheet !! There are no contacts")
-
-        # else:
-        #     print("Couldnt find the Contact.txt file")
-
+        print(contacts,type(contacts))
+    
 while True:
     print("\n--- Contact Manager ---")
     print("1. Add Contact")
