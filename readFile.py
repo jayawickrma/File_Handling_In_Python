@@ -8,6 +8,6 @@
 
 
 
-with open("filehandling.txt",'r')as file:
+with open("textFolders/filehandling.txt",'r')as file:
     content =file.read()
     print(content)
