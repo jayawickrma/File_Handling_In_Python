@@ -1,13 +1,7 @@
 import requests
 
 def weatherFunction(latitude, longitude):
-    """
-    Fetches weather data from the Open-Meteo API for the specified coordinates.
-    
-    :param latitude: Latitude of the location
-    :param longitude: Longitude of the location
-    :return: JSON response data or None if the request fails
-    """
+
     base_url = 'https://api.open-meteo.com/v1/forecast'
     params = {
         'latitude': latitude,
@@ -28,11 +22,7 @@ def weatherFunction(latitude, longitude):
         return None
 
 def weatherFunctionDetails(data):
-    """
-    Extracts and prints weather details from the API response data.
-    
-    :param data: JSON response data from the weather API
-    """
+
     if 'current_weather' in data:
         current_weather = data['current_weather']
         temperature = current_weather.get('temperature', 'N/A')
@@ -50,8 +40,8 @@ def main():
     """
     Main function to fetch and display weather data.
     """
-    latitude = 51.5074  # Example: London latitude
-    longitude = -0.1278  # Example: London longitude
+    latitude = 6.7106  
+    longitude = 79.9074 
     
     print("Fetching weather data...")
     data = weatherFunction(latitude, longitude)
